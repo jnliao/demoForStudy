@@ -1,4 +1,4 @@
-package com.hn.liao.emoji;
+package com.hn.liao.study.util;
 
 import com.vdurmont.emoji.EmojiParser;
 
