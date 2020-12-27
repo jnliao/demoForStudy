@@ -77,8 +77,8 @@ public class MyBatisPlusGenerator {
         pc.setEntity("com.test.domain");
         pc.setMapper("com.test.mapper");
         pc.setXml("com.test.mapper.mapping");
-//        pc.setService("com.test.service");
-//        pc.setServiceImpl("com.test.service.impl");
+        pc.setService("com.test.service");
+        pc.setServiceImpl("com.test.service.impl");
         pc.setController("com.test.endpoint");
         mpg.setPackageInfo(pc);
 
