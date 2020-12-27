@@ -25,7 +25,7 @@ public class MyBatisPlusGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         //这里写你自己的java目录
-        gc.setOutputDir("/JavaCode");
+        gc.setOutputDir("/GeneratorCode");
         //是否覆盖
         gc.setFileOverride(true);
         gc.setActiveRecord(false);
@@ -53,9 +53,9 @@ public class MyBatisPlusGenerator {
 
         });
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("forge");
-        dsc.setPassword("Zhangmen1dui1");
-        dsc.setUrl("jdbc:mysql://test.db.zmaxis.com:3306/uke-hermes?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull");
+        dsc.setUsername("root");
+        dsc.setPassword("123456");
+        dsc.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -65,7 +65,7 @@ public class MyBatisPlusGenerator {
         //移除domain中boolean类型前面的is
         strategy.setEntityBooleanColumnRemoveIsPrefix(true);
         //设置包含的表名
-        strategy.setInclude(new String[]{"uke_formal_student"});
+        strategy.setInclude(new String[]{"test_user"});
         //使用lombook方式生成set、get
         strategy.setEntityLombokModel(true);
         strategy.setNaming(NamingStrategy.underline_to_camel); //f 表名生成策略
@@ -74,12 +74,12 @@ public class MyBatisPlusGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent(null);
-        pc.setEntity("com.zhangmen.uke.soteria.domain");
-        pc.setMapper("com.zhangmen.uke.soteria.mapper");
-        pc.setXml("com.zhangmen.uke.soteria.mapper.mapping");
-        pc.setService("com.zhangmen.uke.soteria.service");
-        pc.setServiceImpl("com.zhangmen.uke.soteria.service.impl");
-        pc.setController("com.zhangmen.uke.soteria.endpoint");
+        pc.setEntity("com.test.domain");
+        pc.setMapper("com.test.mapper");
+        pc.setXml("com.test.mapper.mapping");
+        pc.setService("com.test.service");
+        pc.setServiceImpl("com.test.service.impl");
+        pc.setController("com.test.endpoint");
         mpg.setPackageInfo(pc);
 
         // 注入自定义配置，可以在 VM 中使用 cfg.abc 设置的值
