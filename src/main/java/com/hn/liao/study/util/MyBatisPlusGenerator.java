@@ -25,7 +25,7 @@ public class MyBatisPlusGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         //这里写你自己的java目录
-        gc.setOutputDir("/GeneratorCode");
+        gc.setOutputDir("/IT/generatorCode");
         //是否覆盖
         gc.setFileOverride(true);
         gc.setActiveRecord(false);
@@ -52,7 +52,7 @@ public class MyBatisPlusGenerator {
             }
 
         });
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
         dsc.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull");
@@ -77,8 +77,8 @@ public class MyBatisPlusGenerator {
         pc.setEntity("com.test.domain");
         pc.setMapper("com.test.mapper");
         pc.setXml("com.test.mapper.mapping");
-        pc.setService("com.test.service");
-        pc.setServiceImpl("com.test.service.impl");
+//        pc.setService("com.test.service");
+//        pc.setServiceImpl("com.test.service.impl");
         pc.setController("com.test.endpoint");
         mpg.setPackageInfo(pc);
 
