@@ -25,7 +25,7 @@ public class MyBatisPlusGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         //这里写你自己的java目录
-        gc.setOutputDir("/IT/generatorCode");
+        gc.setOutputDir("/IT/generatorCode/projectName");
         //是否覆盖
         gc.setFileOverride(true);
         gc.setActiveRecord(false);
