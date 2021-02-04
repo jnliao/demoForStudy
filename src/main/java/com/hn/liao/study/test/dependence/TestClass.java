@@ -21,6 +21,6 @@ public class TestClass {
         //DefaultSingletonBeanRegistry
 
         // 解决单例属性注入循环依赖的重要方法（获取bean时）
-        // new DefaultSingletonBeanRegistry().getSingleton("");
+         //new DefaultSingletonBeanRegistry().getSingleton("");
     }
 }
